@@ -5,9 +5,11 @@ echo "🛑 Đang dừng container..."
 docker-compose down
  
 # Cập nhật code từ Git
-echo "🔄 Đang cập nhật code từ Git..."
-git fetch origin $(git rev-parse --abbrev-ref HEAD)
-git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+git config --global --add safe.directory "$(pwd)"
+git fetch origin "$BRANCH"
+git reset --hard "origin/$BRANCH"
+git pull origin "$BRANCH"
 # Khởi động lại Docker container
 echo "🚀 Đang khởi động lại container..."
 docker-compose up -d --build
