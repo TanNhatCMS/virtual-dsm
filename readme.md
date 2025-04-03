@@ -22,6 +22,19 @@ Virtual DSM in a Docker container.
  
 ## Usage  🐳
 
+### How to get Started?
+ 
+ 1. Clone the GitHub repository
+ 
+ ```bash
+ git clone https://github.com/TanNhatCMS/virtual-dsm.git
+ cd virtual-dsm
+ ```
+ 2. Install:
+ 
+ ```bash
+ bash int.sh
+ ```
 ##### Via Docker Compose:
 
 ```yaml
