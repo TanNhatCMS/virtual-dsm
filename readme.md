@@ -33,7 +33,7 @@ Virtual DSM in a Docker container.
  2. Install:
  
  ```bash
- bash int.sh
+ bash init.sh
  ```
 ##### Via Docker Compose:
 
